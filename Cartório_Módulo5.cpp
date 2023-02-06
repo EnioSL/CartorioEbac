@@ -137,6 +137,7 @@ int main() //É a função principal. Sempre é executada primeiro!
 		printf("\t1 - Registrar nomes\n"); //Cabeçalho/instrução de registro
 		printf("\t2 - Consultar nomes\n"); //Cabeçalho/instrução de consulta
 		printf("\t3 - Deletar nomes\n\n"); //Cabeçalho/instrução de deletar
+		printf("\t4 - Sair do sistema\n\n"); //Cabeçalho para sair do sistema
 		printf("Opção: "); //Fim do menu
 	
 		scanf("%d", &opcao); //Armazenando a escolha do usuário
@@ -148,15 +149,20 @@ int main() //É a função principal. Sempre é executada primeiro!
 		{
 			case 1: //compara a opçãp do cliente se é 1
 			registro(); //chamada de funções conforme escolha do usuário
-			break; // encerra a chamada da opçãp registro
+			break; // encerra a chamada da opção registro
 			
 			case 2: //compara a opçãp do cliente se é 2
 			consulta(); //chamada de funções conforme escolha do usuário
-			break; // encerra a chamada da opçãp consulta
+			break; // encerra a chamada da opção consulta
 			
 			case 3: //compara a opçãp do cliente se é 3
 			deletar(); //chamada de funções conforme escolha do usuário
-			break; // encerra a chamada da opçãp deletar
+			break; // encerra a chamada da opção deletar
+			
+			case 4: //opção do cliente para sair do sistema
+			printf("Obrigado por utilizar o sistema!\n");
+			return 0; //Retorna 0 para o sistema e, com isso, quebra o laço/função e sai do sistema.
+			break; // encerra a chamada da opção sair
 			
 			default: // Em caso de nenhuma das opções válidas ter sido ecolhido pelo usuário
 			printf("Essa opção não está disponível!\n");
